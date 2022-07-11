@@ -10,27 +10,38 @@ namespace Unit_4
 
             string color = Console.ReadLine();
 
-            if (color == "красный") {
-                Console.BackgroundColor = ConsoleColor.Red;
-                Console.ForegroundColor = ConsoleColor.Black;
+            switch (color)
+            {
+                case "красный":
+                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.ForegroundColor = ConsoleColor.Black;
 
-                Console.WriteLine("Ваш любимый цвет красный!");
+                    Console.WriteLine("Ваш любимый цвет красный!");
+                    break;
+
+                case "зелёный":
+                    Console.BackgroundColor = ConsoleColor.Green;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Ваш любимый цвет зелёный!");
+                    break;
+
+                case "бирюзовый":
+                    Console.BackgroundColor = ConsoleColor.Cyan;
+                    Console.ForegroundColor = ConsoleColor.Black;
+
+                    Console.WriteLine("Ваш цвет бирюзовый!");
+                    break;
+
+                    default:
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                    Console.ForegroundColor = ConsoleColor.Black;   
+
+                    Console.WriteLine("Ваш цвет жёлтый!");
+                    break;
             }
-
-            else if (color == "зелёный") {
-                Console.BackgroundColor = ConsoleColor.Green;
-                Console.ForegroundColor = ConsoleColor.Black;
-
-                Console.WriteLine("Ваш любимый цвет зелёный!");
-            }
-
-            else {
-                Console.BackgroundColor = ConsoleColor.Cyan;
-                Console.ForegroundColor = ConsoleColor.Black;   
-
-                Console.WriteLine("Ваш цвет бирюзовый!");
             
-            }
+
             Console.ReadKey();  
         }
     }
