@@ -6,12 +6,16 @@ namespace Unit_4
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Напишите ваш любимый цвет");
+            Console.WriteLine("Напишите ваш любимый цвет!");
 
-            string color = Console.ReadLine();
+            int t = 0;
 
-            switch (color)
-            {
+             while (true) { 
+                Console.WriteLine("Иттерация {0}", t);
+                
+                var text = Console.ReadLine();
+switch (text)
+                {  
                 case "красный":
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
@@ -39,8 +43,16 @@ namespace Unit_4
 
                     Console.WriteLine("Ваш цвет жёлтый!");
                     break;
+                }
+                if (text == "stop") {
+                    Console.WriteLine("Цикл остановлен");
+                    break;
+                }
+                
+                
+
+                t++;
             }
-            
 
             Console.ReadKey();  
         }
